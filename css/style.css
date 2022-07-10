@@ -1,6 +1,14 @@
+/* HEADER */    
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body{
     font-family: rale;
     background-color: #F4D03F;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .title{
@@ -11,7 +19,7 @@ body{
     font-style: oblique;
     font-family: rale;
     font-weight: bold;
-    margin-left: 700px;
+    padding-left: 750px;
     margin-top: 40px;
     margin-bottom: 30px;
     
@@ -19,9 +27,9 @@ body{
 }
 
 
-
 .navbar-nav{
-    margin-left: 1250px;
+    margin-left: 600px;
+    gap: 25px;
     
     }
 
@@ -74,17 +82,17 @@ nav a{
 
 /*INICIO PROMOS*/
 
-.promo1{
+.pr1{
     margin-left: 310px;
     padding-bottom: 10px;
 }
 
-.promo2{
+.pr2{
     margin-left: 310px;
     padding-bottom: 10px;
 }
 
-.promos h1{
+.pro h1{
     font-size: 35px;
     padding-top: 20px;
 }
@@ -93,6 +101,40 @@ nav a{
     background-color: #F4D03F;
 }
 
+.containerimg{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat (3,1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+}
+
+.containerimg .box-img figure{
+    width: 100%;
+    height: 100%;
+}
+
+.containerimg .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerimg .box-img:nth-child(1){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+
+
+
+
+
+
 /*FIN DE PROMOS*/
 
 .dv{
@@ -100,6 +142,7 @@ nav a{
     justify-content: flex-start;
     background-color: black;
     padding: 10px 0 10px 10px;
+    position: 0;
     
 
 }
@@ -162,9 +205,10 @@ div a:hover{
 /*INICIO CONTACTO*/
 
 .encuesta{
-    height: 1000px;
+    height: 1700px;
     width: 900px;
     background-color: #F4D03F;
+    
 
 }
 
@@ -172,23 +216,17 @@ div a:hover{
 
 @media screen and (max-width: 576px){
 
-    .promo1{
-        margin-left: 120px;
-    }
-
-    .promo2{
-        margin-left: 120px;
-    }
+    /* INDEX */
 
     .title{
         color: red;
-        font-size: 60px;
+        font-size: 40px;
         text-decoration: none;
         text-transform: uppercase;
         font-style: oblique;
         font-family: rale;
         font-weight: bold;
-        margin-left: 70px;
+        padding-left: 60px;
         
     
     }
@@ -201,9 +239,67 @@ div a:hover{
     .nav-item{
         margin-top: 0px;
         
-        
-        
     }
+
+
+    .bkimg{
+        display: none;
+
+    }
+
+    .containerimg .box-img:nth-child(1){
+        grid-column-start: span 1;
+        grid-row-start: span 1;
+    }
+    
+    .containerimg .box-img img{
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+        margin-left: 20px;
+
+    }
+    
+    .pr1, .pr2{
+        margin-left: 60px;
+
+    }
+    
+    /* PIZZAS */
+
+    .slide{
+        display: none;
+    }
+    
+    .containerimg2{
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat (3,1fr);
+        grid-template-rows: 300px;
+        grid-gap: 20px;
+    }
+    
+    .containerimg2 .box-img2 figure{
+        width: 100%;
+       
+    }
+    
+    .containerimg2 .box-img2 img{
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        padding-left: 40px;
+        padding-bottom: 10px;
+    }
+    
+    .dv{
+        position: relative;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -234,21 +330,11 @@ div a:hover{
     }
 }
 
-/*CARRUSEL*/
-
-.nos1, .nos2, .nos3{
-    height: 500px;
-    width: 650px;
-    margin-left: 600px;
-    margin-top: 20px;
-    
-}
-    
+/*CARRUSEL*/   
 
 .carousel{
     height: 700px;
 }
-
 
 
 .carouseltt{
@@ -269,36 +355,6 @@ div a:hover{
     margin-top: 20px;
     
 }
-
-.carousel1{
-    height: 800px;
-
-}
-
-@media screen and (max-width: 576px){
-
-    .nos1, .nos2, .nos3{
-        margin-left: 50px;
-        margin-top: 200px;
-        height: 300px;
-        width: 350px;
-
-    }
-}
-
-@media screen and (max-width: 576px){
-
-    .piz1, .piz2, .piz3{
-        margin-left: 50px;
-        margin-top: 200px;
-        height: 300px;
-        width: 350px;
-
-    }
-}
- 
-
-
 
 
 /*ÄNIMACION*/
@@ -322,17 +378,5 @@ div a:hover{
 
 
 
-@keyframes cambiarcolor {
-    0%{
-        background-color: pink;
-    }
 
-    50%{
-        background-color: brown;
-    }
-    100%{
-        background-color: red;
-    }
-}
 
-/*BOTON HAMBURGESA*/
